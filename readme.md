@@ -19,8 +19,33 @@ npm install sepa-payment-qr-code
 ## Usage
 
 ```js
-todo
+// generate-qr-code.js
+const generateQrCode = require('sepa-payment-qr-code')
+
+const qr = generateQrCode({
+	name: 'Red Cross of Belgium',
+	iban: 'BE72000000001616',
+	amount: 123.45,
+	reference: 'Urgency fund',
+	information: 'Sample QR code'
+})
+
+process.stdout.write(qr)
 ```
+
+```shell
+node generate-qr-code.js | qrencode -t ansiutf8
+# prints QR code to the terminal
+```
+
+This library only generates the text input to be QR-encoded. Use the library of your choice to render the QR code to PNG/SVG/React/etc.
+
+
+## See also
+
+- [EPC QR code – Wikipedia](https://en.wikipedia.org/wiki/EPC_QR_code)
+- [Quick Response Code: Guidelines to Enable Data Capture for the Initiation of a SEPA Credit Transfer – European Payments Council](https://www.europeanpaymentscouncil.eu/document-library/guidance-documents/quick-response-code-guidelines-enable-data-capture-initiation)
+- [Credit Transfer Payment API – W3C](https://www.w3.org/TR/payment-method-credit-transfer/)
 
 
 ## Contributing
