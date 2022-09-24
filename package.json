@@ -24,7 +24,7 @@
 	"bugs": "https://github.com/derhuerst/sepa-payment-qr-code/issues",
 	"license": "ISC",
 	"engines": {
-		"node": ">=8"
+		"node": ">=18"
 	},
 	"dependencies": {
 		"iban": "0.0.14",
