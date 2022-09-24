@@ -74,8 +74,8 @@ const generateQrCode = data => {
 		VERSION,
 		CHARACTER_SET,
 		IDENTIFICATION_CODE,
-		data.bic, // todo: validate 8/11 chars
-		data.name, // todo: validate <=70 chars
+		data.bic,
+		data.name,
 		serializeIBAN(data.iban),
 		'EUR' + data.amount.toFixed(2),
 		data.purposeCode || '',

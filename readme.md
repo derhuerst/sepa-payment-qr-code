@@ -1,6 +1,6 @@
 # sepa-payment-qr-code
 
-**Generate a [QR code to initiate a SEPA bank transfer](https://en.wikipedia.org/wiki/EPC_QR_code).**
+**Generate a [QR code to initiate a SEPA credit transfer](https://en.wikipedia.org/wiki/EPC_QR_code)** a.k.a. bank transfer.
 
 [![npm version](https://img.shields.io/npm/v/sepa-payment-qr-code.svg)](https://www.npmjs.com/package/sepa-payment-qr-code)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/sepa-payment-qr-code.svg)

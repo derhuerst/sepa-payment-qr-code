@@ -1,7 +1,7 @@
 {
 	"name": "sepa-payment-qr-code",
 	"description": "Generate a QR code to initiate a SEPA bank transfer.",
-	"version": "1.0.2",
+	"version": "2.0.0",
 	"main": "index.js",
 	"files": [
 		"index.js",
@@ -29,8 +29,12 @@
 	"dependencies": {
 		"iban": "0.0.14"
 	},
+	"devDependencies": {
+		"eslint": "^8.24.0"
+	},
 	"scripts": {
+		"lint": "eslint .",
 		"test": "env NODE_ENV=dev node test.js",
-		"prepublishOnly": "npm test"
+		"prepublishOnly": "npm run lint && npm test"
 	}
 }
