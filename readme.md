@@ -34,11 +34,28 @@ process.stdout.write(qr)
 ```
 
 ```shell
-node generate-qr-code.js | qrencode -t ansiutf8
+node generate-qr-code.js | qrencode -t ansiutf8 -l M
 # prints QR code to the terminal
 ```
 
 This library only generates the text input to be QR-encoded. Use the library of your choice to render the QR code to PNG/SVG/React/etc.
+
+Note the following limitations posed by [European Payments Council's (EPC) *Quick Response Code: Guidelines to Enable Data Capture
+for The Initiation of a Sepa Credit Transfer* document](https://www.europeanpaymentscouncil.eu/sites/default/files/KB/files/EPC069-12%20v2.1%20Quick%20Response%20Code%20-%20Guidelines%20to%20Enable%20the%20Data%20Capture%20for%20the%20Initiation%20of%20a%20SCT.pdf):
+
+> 2 2D Code Guidelines
+> Definition:
+> - QR code error level `M` (15% of code words can be restored)
+> - Maximum QR code version `13`, equivalent to module size `69` or 331 byte payload
+> - Character sets:
+> 	- UTF-8
+> 	- ISO 8859-1
+> 	- ISO 8859-2
+> 	- ISO 8859-4
+> 	- ISO 8859-5
+> 	- ISO 8859-7
+> 	- ISO 8859-10
+> 	- ISO 8859-15
 
 
 ## See also
