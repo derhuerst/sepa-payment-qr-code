@@ -5,8 +5,8 @@
 [![npm version](https://img.shields.io/npm/v/sepa-payment-qr-code.svg)](https://www.npmjs.com/package/sepa-payment-qr-code)
 [![build status](https://api.travis-ci.org/derhuerst/sepa-payment-qr-code.svg?branch=master)](https://travis-ci.org/derhuerst/sepa-payment-qr-code)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/sepa-payment-qr-code.svg)
-[![chat with me on Gitter](https://img.shields.io/badge/chat%20with%20me-on%20gitter-512e92.svg)](https://gitter.im/derhuerst)
-[![support me on Patreon](https://img.shields.io/badge/support%20me-on%20patreon-fa7664.svg)](https://patreon.com/derhuerst)
+[![support me via GitHub Sponsors](https://img.shields.io/badge/support%20me-donate-fa7664.svg)](https://github.com/sponsors/derhuerst)
+[![chat with me on Twitter](https://img.shields.io/badge/chat%20with%20me-on%20Twitter-1da1f2.svg)](https://twitter.com/derhuerst)
 
 
 ## Installation
@@ -60,9 +60,9 @@ for The Initiation of a Sepa Credit Transfer* document](https://www.europeanpaym
 
 ## See also
 
-- [EPC QR code – Wikipedia](https://en.wikipedia.org/wiki/EPC_QR_code)
-- [Quick Response Code: Guidelines to Enable Data Capture for the Initiation of a SEPA Credit Transfer – European Payments Council](https://www.europeanpaymentscouncil.eu/document-library/guidance-documents/quick-response-code-guidelines-enable-data-capture-initiation)
-- [Credit Transfer Payment API – W3C](https://www.w3.org/TR/payment-method-credit-transfer/)
+- [EPC QR code – Wikipedia](https://en.wikipedia.org/wiki/EPC_QR_code)
+- [*Quick Response Code: Guidelines to Enable Data Capture for the Initiation of a SEPA Credit Transfer* EPC document](https://www.europeanpaymentscouncil.eu/document-library/guidance-documents/quick-response-code-guidelines-enable-data-capture-initiation)
+- [Credit Transfer Payment API – W3C](https://www.w3.org/TR/payment-method-credit-transfer/)
 
 
 ## Contributing
