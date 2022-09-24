@@ -1,7 +1,7 @@
 {
 	"name": "sepa-payment-qr-code",
 	"description": "Generate a QR code to initiate a SEPA bank transfer.",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"main": "index.js",
 	"files": [
 		"index.js",
@@ -14,7 +14,9 @@
 		"qr",
 		"quick response",
 		"epc",
-		"sct"
+		"sct",
+		"msct",
+		"credit transfer"
 	],
 	"author": "Jannis R <mail@jannisr.de>",
 	"homepage": "https://github.com/derhuerst/sepa-payment-qr-code",
