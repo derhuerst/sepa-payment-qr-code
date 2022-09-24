@@ -22,6 +22,7 @@ const generateQrCode = data => {
 	if (!data) throw new Error('data must be an object.')
 	data = Object.assign(Object.create(null), defaults, data)
 
+	// > AT-21 Name of the Beneficiary
 	assertNonEmptyString(data.name, 'data.name')
 	if (data.name.length > 70) throw new Error('data.name must have <=70 characters')
 

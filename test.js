@@ -46,3 +46,5 @@ foo bar`)
 		})
 	}, 'throws with invalid data.iban')
 }
+
+console.info('seems to work ✓')
