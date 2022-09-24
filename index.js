@@ -22,7 +22,6 @@ const generateQrCode = data => {
 	if (!data) throw new Error('data must be an object.')
 	data = Object.assign(Object.create(null), defaults, data)
 
-	if (isValidIBAN(data.payeeIBAN)) throw new Error('data.payeeIBAN must be a valid IBAN.')
 	assertNonEmptyString(data.name, 'data.name')
 	if ('bic' in data) assertNonEmptyString(data.bic, 'data.bic') // todo: validate
 
