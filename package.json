@@ -27,8 +27,7 @@
 		"node": ">=18"
 	},
 	"dependencies": {
-		"iban": "0.0.14",
-		"is-currency-code": "^1.2.0"
+		"iban": "0.0.14"
 	},
 	"scripts": {
 		"test": "env NODE_ENV=dev node test.js",

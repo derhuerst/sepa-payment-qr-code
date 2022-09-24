@@ -1,6 +1,5 @@
 'use strict'
 
-const isCurrencyCode = require('is-currency-code')
 const {isValid: isValidIBAN, electronicFormat: serializeIBAN} = require('iban')
 
 const SERVICE_TAG = 'BCD'
@@ -14,13 +13,8 @@ const assertNonEmptyString = (val, name) => {
 	}
 }
 
-const defaults = {
-	currency: 'EUR'
-}
-
 const generateQrCode = data => {
 	if (!data) throw new Error('data must be an object.')
-	data = Object.assign(Object.create(null), defaults, data)
 
 	// > AT-21 Name of the Beneficiary
 	assertNonEmptyString(data.name, 'data.name')
@@ -44,10 +38,6 @@ const generateQrCode = data => {
 	if ('number' !== typeof data.amount) throw new Error('data.amount must be a number.')
 	if (data.amount < 0.01 || data.amount > 999999999.99) {
 		throw new Error('data.amount must be >=0.01 and <=999999999.99.')
-	}
-	// todo [breaking]: require EUR
-	if (!isCurrencyCode(data.currency)) {
-		throw new Error('data.currency must be a valid currency code.')
 	}
 
 	// > AT-44 Purpose of the Credit Transfer
@@ -87,7 +77,7 @@ const generateQrCode = data => {
 		data.bic, // todo: validate 8/11 chars
 		data.name, // todo: validate <=70 chars
 		serializeIBAN(data.iban),
-		data.currency + data.amount.toFixed(2),
+		'EUR' + data.amount.toFixed(2),
 		data.purposeCode || '',
 		data.structuredReference || '',
 		data.unstructuredReference || '',

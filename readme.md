@@ -56,6 +56,8 @@ for The Initiation of a Sepa Credit Transfer* document](https://www.europeanpaym
 > 	- ISO 8859-10
 > 	- ISO 8859-15
 
+Also note that EPC QR codes are always in euros (`EUR`).
+
 
 ## See also
 
