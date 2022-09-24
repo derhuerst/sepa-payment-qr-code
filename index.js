@@ -32,6 +32,13 @@ const generateQrCode = data => {
 		// todo: validate more?
 	}
 
+	// > AT-20 Account number of the Beneficiary
+	// > Only IBAN is allowed.
+	assertNonEmptyString(data.iban, 'data.iban')
+	if (!isValidIBAN(data.iban)) {
+		throw new Error('data.iban must be a valid iban code.')
+	}
+
 	// > AT-04 Amount of the Credit Transfer in Euro
 	if ('number' !== typeof data.amount) throw new Error('data.amount must be a number.')
 	if (data.amount < 0.01 || data.amount > 999999999.99) {

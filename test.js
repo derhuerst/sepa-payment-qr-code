@@ -3,7 +3,7 @@
 const a = require('assert')
 const generateQrCode = require('.')
 
-a.strictEqual(generateQrCode({
+const ex1 = {
 	name: 'Red Cross of Belgium',
 	iban: 'BE72000000001616',
 	bic: 'BPOTBEB1',
@@ -12,7 +12,9 @@ a.strictEqual(generateQrCode({
 	purposeCode: 'abc',
 	structuredReference: '123',
 	information: 'foo bar'
-}), `\
+}
+
+a.strictEqual(generateQrCode(ex1), `\
 BCD
 002
 1
@@ -25,3 +27,22 @@ abc
 123
 
 foo bar`)
+
+// missing data.iban
+{
+	const ex2 = {...ex1}
+	delete ex2.iban
+	a.throws(() => {
+		generateQrCode(ex2)
+	}, 'throws with missing data.iban')
+}
+
+// invalid data.iban
+{
+	a.throws(() => {
+		generateQrCode({
+			...ex1,
+			iban: 'BE00000000000000',
+		})
+	}, 'throws with invalid data.iban')
+}
