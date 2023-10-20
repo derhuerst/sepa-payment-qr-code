@@ -35,9 +35,11 @@ const generateQrCode = data => {
 	}
 
 	// > AT-04 Amount of the Credit Transfer in Euro
-	if ('number' !== typeof data.amount) throw new Error('data.amount must be a number.')
-	if (data.amount < 0.01 || data.amount > 999999999.99) {
-		throw new Error('data.amount must be >=0.01 and <=999999999.99.')
+	if ('amount' in data) {
+		if ('number' !== typeof data.amount) throw new Error('data.amount must be a number.')
+		if (data.amount < 0.01 || data.amount > 999999999.99) {
+			throw new Error('data.amount must be >=0.01 and <=999999999.99.')
+		}
 	}
 
 	// > AT-44 Purpose of the Credit Transfer
@@ -77,7 +79,7 @@ const generateQrCode = data => {
 		data.bic,
 		data.name,
 		serializeIBAN(data.iban),
-		'EUR' + data.amount.toFixed(2),
+		data.amount ? 'EUR' + data.amount.toFixed(2) : data.amount,
 		data.purposeCode || '',
 		data.structuredReference || '',
 		data.unstructuredReference || '',
