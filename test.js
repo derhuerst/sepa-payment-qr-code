@@ -47,4 +47,22 @@ foo bar`)
 	}, 'throws with invalid data.iban')
 }
 
+// omitted amount
+a.strictEqual(generateQrCode({
+	...ex1,
+	amount: null,
+}), `\
+BCD
+002
+1
+SCT
+BPOTBEB1
+Red Cross of Belgium
+BE72000000001616
+
+abc
+123
+
+foo bar`)
+
 console.info('seems to work ✓')
