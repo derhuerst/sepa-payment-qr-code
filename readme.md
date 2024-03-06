@@ -63,7 +63,7 @@ Also note that EPC QR codes are always in euros (`EUR`).
 
 - [EPC QR code – Wikipedia](https://en.wikipedia.org/wiki/EPC_QR_code)
 - [*Quick Response Code: Guidelines to Enable Data Capture for the Initiation of a SEPA Credit Transfer* EPC document](https://www.europeanpaymentscouncil.eu/document-library/guidance-documents/quick-response-code-guidelines-enable-data-capture-initiation)
-- [Credit Transfer Payment API – W3C](https://www.w3.org/TR/payment-method-credit-transfer/)
+- [Credit Transfer Payment API – W3C](https://w3c.github.io/payment-method-credit-transfer/)
 
 
 ## Contributing
